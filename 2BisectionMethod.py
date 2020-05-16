@@ -16,9 +16,9 @@ def inter(a, b, middle):
         return "This doesn't work"
 
 #running the script
-its = int(input("How many iterations are required? "))
-a = int(input("What is the value of a? "))
-b = int(input("What is the value of b? "))
+its = float(input("How many iterations are required? "))
+a = float(input("What is the value of a? "))
+b = float(input("What is the value of b? "))
 for i in range(its):
     #change the range
     print("\n")
