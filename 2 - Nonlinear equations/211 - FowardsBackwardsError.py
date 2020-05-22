@@ -3,7 +3,7 @@ import numpy as np
 x = Symbol("x")
 
 #enter function here
-y = np.e**x + sin(x) - 4
+y = log(x - 3) + x - 2
 derived = y.diff(x)
 
 root = float(input("What is the root: "))
