@@ -11,11 +11,14 @@ A = []
 for i in range(len(x)):
     app = [1, np.sin(x[i]), np.cos(x[i])]
     A.append(app)
-print(A)
 B = [[-1.9],[1],[4.1],[4.3]]
 T = np.transpose(A)
 F = T.dot(A)
 G= T.dot(B)
+print("A")
+print(A)
+print("T")
+print(T)
 print(F)
 print(G)
 print("asdfasd")

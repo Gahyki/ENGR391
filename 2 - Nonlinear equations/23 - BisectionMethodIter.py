@@ -1,7 +1,7 @@
 import numpy as np
 def f(x):
     #define your function here
-    return x**3 - 7
+    return 3.5*x**4 + 12.8*x**3 + 5.5*x**2 + 12.8*x + 2
 
 def m(a, b):
     #middle
@@ -15,11 +15,13 @@ def inter(a, b, middle):
     else:
         return "This doesn't work"
 
+root = 0
+
 #running the script
 its = float(input("How many iterations are required? "))
 a = float(input("What is the value of a? "))
 b = float(input("What is the value of b? "))
-for i in range(its):
+for i in range(int(its)):
     #change the range
     print("\n")
     print(str(i + 1))
@@ -30,4 +32,5 @@ for i in range(its):
         break
     a = iteration[0]
     b = iteration[1]
+    root = str(m(a, b))
     print("Root is: " + str(m(a, b)))

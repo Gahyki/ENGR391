@@ -11,8 +11,8 @@ root = float(input("What is the root: "))
 def back(root):
     return abs(y.subs(x, root))
     
-def fow(root):
+def forw(root):
     return back(root)/abs(derived.subs(x, root))
 print(back(root))
 print(derived)
-print(fow(root))
+print(forw(root))
