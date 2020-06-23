@@ -16,3 +16,5 @@ anp = np.array(A)
 bnp = np.array(B)
 rnp = np.dot(np.linalg.inv(anp), bnp)
 print("Numpy: \n" + str(rnp))
+
+#TO GET D, MAKE MATRIX A AS THE LOWER OF LU

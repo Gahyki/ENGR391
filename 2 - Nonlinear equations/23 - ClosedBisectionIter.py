@@ -1,7 +1,7 @@
 import numpy as np
 def f(x):
     #define your function here
-    return 3.5*x**4 + 12.8*x**3 + 5.5*x**2 + 12.8*x + 2
+    return x**3 - 7
 
 def m(a, b):
     #middle
@@ -14,8 +14,6 @@ def inter(a, b, middle):
         return (middle, b)
     else:
         return "This doesn't work"
-
-root = 0
 
 #running the script
 its = float(input("How many iterations are required? "))

@@ -4,7 +4,7 @@ counter = 1
 
 def f(x):
     #insert function here
-    return np.e**(x-2)+ x**3
+    return np.cos(x)
 
 def tolerance(a, b):
     #could be relative so be careful
@@ -23,8 +23,8 @@ while tolerance(x, f(x)) >= err:
     print(counter)
     x1 = f(x)
     x = x1
-    print(x)
-    print(f(x1))
-    print(tolerance(x, f(x)))
+    print("x: " + str(x))
+    print("y: " + str(f(x1)))
+    print("Error: " + str(tolerance(x, f(x))))
 
 

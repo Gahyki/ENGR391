@@ -24,6 +24,7 @@ a = float(input("What is the value of a? "))
 b = float(input("What is the value of b? "))
 it = 0
 print(it)
+print("("+ str(a) + ", " + str(b) + ")")
 print(tolerance(a, b))
 
 while tolerance(a, b) >= err:

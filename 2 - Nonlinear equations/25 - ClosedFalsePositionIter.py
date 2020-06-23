@@ -23,6 +23,7 @@ its = int(input("How many iterations are required? ")) + 1
 a = int(input("What is the value of a? "))
 b = int(input("What is the value of b? "))
 for i in range(its):
+    print("\n")
     #change the range
     middle = xc(a,b)
     iteration = inter(a, b, middle)
@@ -31,3 +32,4 @@ for i in range(its):
         break
     a = iteration[0]
     b = iteration[1]
+    print("Approximation of the root is: " + str(m(a, b)))

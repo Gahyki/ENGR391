@@ -1,37 +1,42 @@
 from sympy import sin, cos
 import numpy as np
 
-x = [0,1,2,3]
-y = [-1.9,1,4.1,4.3]
-total = 0
+x = [-2,1,3]
+y = [2,-1,1]
 
+#linear square error
 
-#Type 2
-A = []
-for i in range(len(x)):
-    app = [1, np.sin(x[i]), np.cos(x[i])]
-    A.append(app)
-B = [[-1.9],[1],[4.1],[4.3]]
-T = np.transpose(A)
-F = T.dot(A)
-G= T.dot(B)
-print("A")
-print(A)
-print("T")
-print(T)
-print(F)
-print(G)
-print("asdfasd")
+def xy():
+    xy = []
+    for i in range(len(x)):
+        xy.append(x[i]*y[i])
+    return xy
+        
+xy = xy()
 
-thea = np.linalg.inv(F).dot(G)
+def x2():
+    x2 = []
+    for i in range(len(x)):
+        x2.append(x[i]**2)
+    return x2
 
+x2 = x2()
 
-#Type 1
-a0 = thea[0][0]
-a1 = thea[1][0]
-a2 = thea[2][0]
+def a1():
+    return (len(x)*sum(xy)-sum(x)*sum(y))/(len(x)*sum(x2)-sum(x)**2)
 
-for i in range(len(x)):
-    s = (y[i] - a0 - a1*np.sin(x[i]) - a2*np.cos(x[i]))**2
-    total += s
-print(total)
+a1 = a1()
+
+def a0():
+    return 1/len(x)*sum(y)-a1*1/len(x)*sum(x)
+
+a0 = a0()
+
+def se(a0, a1):
+    total = 0
+    for i in range(len(x)):
+        #function here
+        total += float(y[i] - a0 - a1*x[i])**2
+    return total
+
+print(se(-4.8,1.3))

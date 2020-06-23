@@ -38,6 +38,8 @@ while tolerance(a, b) >= err:
     before = tolerance(a, b)
     a = iteration[0]
     b = iteration[1]
-    print(tolerance(a, b))
+    print("Error: " + str(tolerance(a, b)))
     if before == tolerance(a, b):
         break
+    print("Approximation of the root is: " + str(m(a, b)))
+

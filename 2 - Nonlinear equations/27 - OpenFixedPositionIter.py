@@ -4,12 +4,13 @@ counter = 0
 
 def f(x):
     #insert function here
-    return np.e**(x)+ 4*x**2
+    return np.cos(x)
 
 it = int(input("How many iterations would you like to have? "))
 x = float(input("What is the initial guess? "))
 print(counter)
-print(f(x))
+print("x: " + str(x))
+print("y: " + str(f(x)))
 
 for element in range(it):
     print("\n")
@@ -17,5 +18,6 @@ for element in range(it):
     x1 = f(x)
     x = x1
     print(counter)
-    print(f(x1))
+    print("x: " + str(x))
+    print("y: " + str(f(x1)))
 

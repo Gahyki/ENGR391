@@ -3,7 +3,7 @@ import numpy as np
 x = Symbol('x')
 
 #formula
-y = x**5 - 2*x**4 + 2*x**2 - x
+y = x - cos(x)
 
 def root(a):
     return a - y.subs(x, a)/y.diff(x).subs(x, a)
@@ -17,21 +17,38 @@ try:
     ask = int(input("Enter 0 to input the iteration\nEnter 1 to input the accepted error\nEnter your choice here: "))
     if ask == 0:
         it = int(input("Enter the number of iterations to execute: "))
-        print(y)
-        
-        #for element in range(it):
+        r = float(input("What is the initial value? "))
+        r1 = root(r)
+        print(counter)
+        print("x: " + str(r))
+        print("x1: " + str(r1))
+        for element in range(it):
+            print("\n")
+            counter += 1
+            print(counter)
+            r = r1
+            r1 = root(r)
+            print("x: " + str(r))
+            print("x1: " + str(r1))
+            print("Error: " + str(abserror(r, r1)))
             
     elif ask == 1:
         err = float(input("Enter the accepted error value: "))
         r = float(input("What is the initial value? "))
         r1 = root(r)
-        print(r)
-        print(r1)
         print(counter)
-        print(y)
+        print("x: " + str(r))
+        print("x1: " + str(r1))
+        print("Error: " + str(abserror(r, r1)))
         while abserror(r, r1) >= err:
+            print("\n")
             counter += 1
             print(counter)
+            r = r1
+            r1 = root(r)
+            print("x: " + str(r))
+            print("x1: " + str(r1))
+            print("Error: " + str(abserror(r, r1)))
             
     else:
         print("That is not an option.")
