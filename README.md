@@ -1,2 +1,2 @@
-# ENGR391
-## Numerical Methods
+# Numerical Methods
+ENGR391
